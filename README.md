@@ -1,2 +1,2 @@
 # DSA-
-" Exploring DSA : daily code solutions to exhance problem solving abilities "
+" Exploring DSA: daily code solutions to enhance problem-solving abilities "
