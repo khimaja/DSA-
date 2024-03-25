@@ -1,1 +1,12 @@
+//Find the minimum and maximum elements in an array
 
+
+
+
+
+class Solution {
+public:
+ pair<long long, long long> getMinMax(long long a[], int n) {
+    return make_pair(*min_element(a, a + n), *max_element(a, a + n));
+}
+};
