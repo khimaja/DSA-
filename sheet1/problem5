@@ -1,0 +1,35 @@
+//Bitonic Point
+
+
+
+
+//User function template for C++
+class Solution{
+public:
+	int findMaximum(int arr[], int n) {
+        // Edge case: If the array has only one element, return it
+        if (n == 1)
+            return arr[0];
+        
+        int left = 0;
+        int right = n - 1;
+        
+        // Binary search to find the maximum element
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            
+            // If the mid element is less than the element next to it,
+            // the maximum element lies on the right side of mid
+            if (arr[mid] < arr[mid + 1]) {
+                left = mid + 1;
+            }
+            // Otherwise, the maximum element lies on the left side of mid
+            else {
+                right = mid;
+            }
+        }
+        
+        // The maximum element will be at index left (or right)
+        return arr[left];
+    }
+};
